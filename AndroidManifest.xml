@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.GuideMe"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Setting up permissions -->
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- Code added by Iran -->
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- End of added code -->
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Code added by Iran -->
+
+        <receiver android:name="com.example.GuideMe.GuideMeBroadCastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- End of added code -->
+
+        <activity
+            android:name="com.example.GuideMe.MainActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:imeOptions="actionSend|flagNoEnterAction"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!-- App is updated to be in portrait mode -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <!--
+                    Following two lines of codes makes the app unexitable
+			        
+			        <category android:name="android.intent.category.HOME"/>
+                	<category android:name="android.intent.category.DEFAULT"/> 
+                	
+                	End of codes
+                -->
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.GuideMe.DisplayAboutGuideMeActivity"
+            android:label="@string/title_activity_display_about_guide_me"
+            android:parentActivityName="com.example.GuideMe.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.GuideMe.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.GuideMe.DisplayGuideActivity"
+            android:label="@string/title_activity_display_guide"
+            android:parentActivityName="com.example.GuideMe.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.GuideMe.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
