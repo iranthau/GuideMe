@@ -9,7 +9,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import com.example.GuideMe.R;
 
 import android.app.Activity;
 import android.content.Context;
