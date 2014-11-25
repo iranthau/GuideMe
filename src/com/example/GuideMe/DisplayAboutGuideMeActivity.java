@@ -19,9 +19,10 @@ public class DisplayAboutGuideMeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_about_guide_me);
-		
-		ImageView image = (ImageView) findViewById(R.id.imageView1);
-        image.setImageResource(R.drawable.ic_launcher);
+
+
+//		ImageView image = (ImageView) findViewById(R.id.imageView1);
+//        image.setImageResource(R.drawable.ic_launcher);
 
 //		if (savedInstanceState == null) {
 //			getFragmentManager().beginTransaction()

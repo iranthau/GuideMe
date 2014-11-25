@@ -28,7 +28,7 @@
     <string name="aboutGuideMe">About GuideMe</string>
     <string name="guide">Guide</string>
     <string name="title_activity_display_about_guide_me">About GuideMe</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_guide">Guide</string>
+    <string name="instructions">	1.	Please enter details </string>
 
 </resources>

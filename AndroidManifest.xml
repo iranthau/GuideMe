@@ -74,6 +74,7 @@
         <activity
             android:name="com.example.GuideMe.DisplayAboutGuideMeActivity"
             android:label="@string/title_activity_display_about_guide_me"
+            android:screenOrientation="portrait"
             android:parentActivityName="com.example.GuideMe.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -82,6 +83,7 @@
         <activity
             android:name="com.example.GuideMe.DisplayGuideActivity"
             android:label="@string/title_activity_display_guide"
+            android:screenOrientation="portrait"
             android:parentActivityName="com.example.GuideMe.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
