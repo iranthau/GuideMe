@@ -99,16 +99,6 @@ public class MainActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		
-		//Show instructions.
-		TextView instructions = (TextView) findViewById(R.id.about);
-		
-		String instructionText = "Press the green button to start recording.\n\n" +
-								"When the recording is done press the red button to stop recording.\n\n" + 
-								"The recorded files will be saved in the GuideMe folder.";
-		
-		instructions.setText(instructionText);
 				
 		try {
 			Button button = (Button) findViewById(R.id.button_capture);
@@ -568,12 +558,12 @@ public class MainActivity extends Activity {
 	//About guide me.
 	public void showAboutGuideMe(View view) {
 		
-		Intent aboutIntent = new Intent(this, DisplayAboutGuideMeActivity.class);
+		Intent aboutIntent = new Intent(MainActivity.this, DisplayAboutGuideMeActivity.class);
 		startActivity(aboutIntent);
 	}
 	
 	public void showGuide(View view) {
-		Intent guideIntent = new Intent(this, DisplayGuideActivity.class);
+		Intent guideIntent = new Intent(MainActivity.this, DisplayGuideActivity.class);
 		startActivity(guideIntent);
 	}
 

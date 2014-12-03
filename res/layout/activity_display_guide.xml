@@ -1,23 +1,63 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.GuideMe.DisplayGuideActivity"
-    tools:ignore="MergeRootFrame" >
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.GuideMe.DisplayGuideActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView"
-        android:layout_gravity="center"
-        android:fillViewport="false">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/instructions_1"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/instructions_2"
+            android:id="@+id/textView3"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/nexus"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/instructions"
-            android:id="@+id/textview" />
-    </ScrollView>
-</FrameLayout>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/phone_parts"
+            android:id="@+id/phone_parts"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/instructions_3"
+            android:id="@+id/textView4"
+            android:layout_weight="1"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+</ScrollView>
